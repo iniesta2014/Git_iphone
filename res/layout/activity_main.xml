@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6e6"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true" >
+            
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="苹果序列号查询"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:background="#4CAF50" />
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"        
+        android:layout_weight="1" />
+                
+   <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"        
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="请输入序列号..."
+        android:textColorHint="#4CAF50"
+        android:maxLength="12"
+        android:maxLines="1"
+        android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:gravity="center"
+        android:textColor="#3C4146"
+        android:background="@drawable/edittext_search" />  
+        
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="0dp"       
+       android:layout_weight="0.5" />
+
+    <Button 
+        android:id="@+id/search_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"       
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:text="开始查询"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_search_selector"/>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"        
+        android:layout_weight="0.5" />
+    
+
+                
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/search_history_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/listview_search_history" />
+
+    
+    <Button
+        android:id="@+id/clear_history_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" 
+        android:layout_marginBottom="10dp"  
+        android:text="清空查询历史"
+        android:textSize="16sp"
+        android:textColor="#3c4146"
+        android:background="@drawable/button_empty_history_selector" />
+
+
+</LinearLayout>
